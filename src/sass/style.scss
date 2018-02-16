@@ -113,6 +113,30 @@ article h1 {
   display: flex;
 }
 
+$color: red;
+p {
+color: $color;
+}
+
+.row {
+  display: flex;
+  margin: 200px;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.column1 {
+  width: 30px;
+  height: 100px;
+  background-color: black;
+}
+
+.column2 {
+  width: 70px;
+  height: 100px;
+  background-color: red;
+}
+
 /* ////////////////////////////////////////// next //////////////////////////////////////////////// */
 
 .block4 {
