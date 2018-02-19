@@ -1,5 +1,6 @@
 const path = require('path'),
-      ExtractTextPlugin = require("extract-text-webpack-plugin");
+      ExtractTextPlugin = require("extract-text-webpack-plugin"),
+      MinifyPlugin = require("babel-minify-webpack-plugin");
 
 module.exports = {
   entry: ['./src/scripts/index.js', './src/sass/style.scss'],
@@ -9,7 +10,15 @@ module.exports = {
   },
   watch: true,
   module: {
-    rules: [
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules\/dist)/,
+        use: {
+          loader: 'babel-loader'
+          // "presets": ["es2015"] -> see .babelrc
+        }
+      },
       { // sass / scss loader for webpack
         test: /\.(sass|scss)$/,
         loader: ExtractTextPlugin.extract([
@@ -26,6 +35,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('./css/style.bundle.min.css')
+    new ExtractTextPlugin('./css/bundle.min.css'),
+    new MinifyPlugin({}, {
+      exclude: 'node_modules'
+    })
   ]
 };
