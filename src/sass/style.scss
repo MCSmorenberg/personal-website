@@ -1,13 +1,15 @@
 // Vendor
-@import 'vendor/_normalize.scss';
+@import 'vendor/normalize.scss';
 
 // Modules
-// @import 'modules/_vars.scss';
+@import 'modules/fonts.scss';
+@import 'modules/vars.scss';
 // @import 'modules/_tags.scss';
 
 // Partials
-@import 'partials/_layout.scss';
-@import 'partials/_home.scss';
-@import 'partials/_about.scss';
-@import 'partials/_projects.scss';
-@import 'partials/_blog.scss';
+@import 'partials/layout.scss';
+@import 'partials/home.scss';
+@import 'partials/about.scss';
+@import 'partials/projects.scss';
+// @import 'partials/blog.scss';
+@import 'partials/footer.scss';

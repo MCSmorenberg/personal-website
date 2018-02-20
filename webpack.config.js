@@ -13,7 +13,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        exclude: /(node_modules\/dist)/,
+        exclude: /(node_modules|dist)/,
         use: {
           loader: 'babel-loader'
           // "presets": ["es2015"] -> see .babelrc
