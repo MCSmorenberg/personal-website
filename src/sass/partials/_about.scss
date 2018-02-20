@@ -1,25 +1,25 @@
-.block2 {
+.about {
   height: $page-height;
   width: 100%;
-  background: #F0F0F0;
+  background-color: #F0F0F0;
   display: flex;
   position: relative;
-}
 
-.about-block {
-  position: absolute;
-  top: 96px;
-  left: 110px;
-  width: 480px;
-  height: 480px;
-  background-color: $ice-blue;
-}
+  &__block {
+    position: absolute;
+    top: 96px;
+    left: 110px;
+    width: 480px;
+    height: 480px;
+    background-color: $ice-blue;
+  }
 
-.skills-block {
-  position: absolute;
-  top: 355px;
-  left: 515px;
-  width: 275px;
-  height: 160px;
-  background-color: $dark-blue;
+  &__skills {
+    position: absolute;
+    top: 355px;
+    left: 515px;
+    width: 275px;
+    height: 160px;
+    background-color: $dark-blue;
+  }
 }
