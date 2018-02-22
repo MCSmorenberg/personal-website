@@ -1,25 +1,38 @@
-.block3 {
+.projects {
   height: $page-height;
-  width: 100%;
+  // max-width: 100vw;
   background: #D8D8D8;
   display: flex;
 }
 
-.row {
-  display: flex;
-  margin: 200px;
-  justify-content: space-between;
-  flex-direction: row;
+.grid {
+  padding: 7.75rem;
+	width: 100%;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(9, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 }
 
-.column1 {
-  width: 30px;
-  height: 100px;
-  background-color: black;
-}
+.grid__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2.125rem;
+	background-color: white;
 
-.column2 {
-  width: 70px;
-  height: 100px;
-  background-color: red;
+	&--small {
+		grid-column: span 3;
+		grid-row: span 1;
+	}
+
+	&--medium {
+		grid-column: span 4;
+		grid-row: span 1;
+	}
+
+	&--large {
+		grid-column: span 5;
+		grid-row: span 1;
+	}
 }
