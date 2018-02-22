@@ -1,12 +1,12 @@
 .projects {
   height: $page-height;
   // max-width: 100vw;
-  background: #D8D8D8;
+  background: $light-teal;
   display: flex;
 }
 
 .grid {
-  padding: 7.75rem;
+  padding: 7.75rem 10.75rem 7.75rem 10.75rem;
 	width: 100%;
 	display: grid;
 	grid-gap: 10px;
