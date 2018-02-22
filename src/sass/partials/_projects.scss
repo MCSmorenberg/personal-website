@@ -1,17 +1,8 @@
-
-
-
-
 .block3 {
-  height: 660px;
+  height: $page-height;
   width: 100%;
   background: #D8D8D8;
   display: flex;
-}
-
-$color: red;
-p {
-color: $color;
 }
 
 .row {

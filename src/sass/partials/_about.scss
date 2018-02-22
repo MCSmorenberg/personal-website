@@ -1,5 +1,5 @@
 .block2 {
-  height: 660px;
+  height: $page-height;
   width: 100%;
   background: #F0F0F0;
   display: flex;
@@ -8,18 +8,18 @@
 
 .about-block {
   position: absolute;
-  top: 100px;
+  top: 96px;
   left: 110px;
-  width: 468px;
-  height: 461px;
-  background-color: #f3fdff;
+  width: 480px;
+  height: 480px;
+  background-color: $ice-blue;
 }
 
 .skills-block {
   position: absolute;
   top: 355px;
   left: 515px;
-  width: 260px;
-  height: 150px;
-  background-color: #375e75;
+  width: 275px;
+  height: 160px;
+  background-color: $dark-blue;
 }
