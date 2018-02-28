@@ -4,45 +4,51 @@
     <meta charset="utf-8">
     <title>Personal Website</title>
     <link rel="stylesheet" href="dist/css/bundle.min.css">
-    <link rel="preload" href="dist/bundle.js" as="script">
+    <!-- <link rel="preload" href="dist/bundle.js" as="script"> -->
   </head>
   <body>
-    <section class="menu">
-      <a class="menu__link menu__link--home" href="#">MAURICE</a>
+    <section id="home-page" class="menu">
+      <a id="home-link" class="menu__link menu__link--home" href="#">MAURICE</a>
       <div class="view-box box-one">
-        <a class="menu__link" href="#">About.</a>
+        <a id="about-link" class="menu__link" href="#">About.</a>
       </div>
       <div class="view-box box-two">
-        <a class="menu__link menu__link--projects" href="#">Projects.</a>
+        <a id="projects-link" class="menu__link menu__link--projects" href="#" >Projects.</a>
       </div>
       <div class="view-box box-three">
-        <a class="menu__link menu__link--blog" href="#">Blog.</a>
+        <a id="blog-link" class="menu__link menu__link--blog" href="#">Blog.</a>
       </div>
     </section>
 
-    <section class="block2">
-      <div class="about-block">
+    <section id="about-page" class="about">
+      <p class="about__title">About.</p>
+      <div class="about__block">
       </div>
-      <div class="skills-block">
+      <div class="about__skills">
       </div>
     </section>
 
-    <section class="block3">
-      <div class="row">
-        <div class="column1">
-        <!-- 50% width -->
+    <section id="projects-page" class="projects">
+      <p class="projects__title">Projects.</p>
+      <div class="grid">
+        <div class="grid__item grid__item--medium">
         </div>
-        <div class="column2">
-        <!-- 50% width -->
+        <div class="grid__item grid__item--large">
+        </div>
+        <div class="grid__item grid__item--small">
+        </div>
+        <div class="grid__item grid__item--small">
+        </div>
+        <div class="grid__item grid__item--small">
         </div>
       </div>
     </section>
 
-    <section class="block4">
+    <footer class="footer">
       <div>
       </div>
-    </section>
-
+    </footer>
     <script src="dist/bundle.js"></script>
+    <!-- <script src="src/scripts/index.js"></script> -->
   </body>
 </html>

@@ -1,25 +1,37 @@
-.block2 {
+.about {
   height: $page-height;
   width: 100%;
-  background: #F0F0F0;
+  background-color: #696969;
   display: flex;
   position: relative;
-}
 
-.about-block {
-  position: absolute;
-  top: 96px;
-  left: 110px;
-  width: 480px;
-  height: 480px;
-  background-color: $ice-blue;
-}
+  &__title {
+    @include font-heavy(50px);
+    color: $ice-blue;
+    position: absolute;
+    margin-top: 300px;
+    left: -30px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+  }
 
-.skills-block {
-  position: absolute;
-  top: 355px;
-  left: 515px;
-  width: 275px;
-  height: 160px;
-  background-color: $dark-blue;
+  &__block {
+    position: absolute;
+    top: 96px;
+    left: 130px;
+    width: 480px;
+    height: 480px;
+    background-color: $ice-blue;
+  }
+
+  &__skills {
+    position: absolute;
+    top: 355px;
+    left: 535px;
+    width: 275px;
+    height: 160px;
+    background-color: $dark-blue;
+  }
 }

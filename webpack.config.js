@@ -15,8 +15,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules|dist)/,
         use: {
-          loader: 'babel-loader'
-          // "presets": ["es2015"] -> see .babelrc
+          loader: 'babel-loader',
+          query: {
+            "presets": ["es2015"] //-> see .babelrc
+          }
         }
       },
       { // sass / scss loader for webpack
