@@ -13,7 +13,8 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
-    "flexbox": "0.0.3"
+    "flexbox": "0.0.3",
+    "smoothscroll-polyfill": "^0.4.3"
   },
   "devDependencies": {
     "babel-minify-webpack-plugin": "^0.3.0",
