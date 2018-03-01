@@ -11,10 +11,12 @@
 
     &--home {
       @include font-heavy(160px);
+      transition: all .15s ease-in-out;
       opacity: 0.5;
       margin-left: auto;
       margin-right: auto;
       top: 180px;
+      font-size: 190px;
       left: 0;
       right: 0;
       z-index: 100;
@@ -33,6 +35,14 @@
   }
 }
 
+.animate__link-home {
+  position: fixed;
+  transition: all .15s ease-in-out;
+  transform: scale(0.2);
+  top: -65px;
+  opacity: 1;
+}
+
 .view-box {
   /* position: relative; */
   /* width: 44%; */
@@ -44,9 +54,20 @@
   /* margin-left: -12%; */
 }
 
+.view-box__layer {
+  background-color: $dusty-blue;
+  width: 100%;
+  z-index: 100;
+  height: $page-height;
+  opacity: 0.75;
+}
+
 .box-one {
-  background-color: #7e7e7e;
   width: 50%;
+  background-image: url('~../../src/img/maurice.jpg');
+  background-repeat: no-repeat;
+  background-position: 69% 50%;
+  background-size: 1050px;
 }
 
 .box-two {
@@ -54,13 +75,19 @@
   margin-left: 30%;
   z-index: 1;
   position: absolute;
-  background-color: #939393;
+  background-image: url('~../../src/img/code2.jpeg');
+  background-repeat: no-repeat;
+  background-position: 20%;
+  background-size: 1050px;
   -ms-transform: skewX(18deg);
   -webkit-transform: skewX(18deg);
   transform: skewX(18deg);
 }
 
 .box-three {
-  background-color: #a8a8a8;
+  background-image: url('~../../src/img/radar.jpg');
+  background-repeat: no-repeat;
+  background-position: 20% 40%;
+  background-size: 1100px;
   width: 50%;
 }
