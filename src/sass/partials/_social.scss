@@ -8,10 +8,6 @@
   margin-top: -2.5em;
   background-color: #8fde37;
   z-index: 1;
-  // background-image: url('~../../src/img/linkedin.svg');
-  // background-repeat: no-repeat;
-  // background-position: 50% 50%;
-  // background-size: 1.6em;
 }
 
 .linkedin-link {
@@ -27,4 +23,11 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 1.6em;
+}
+
+@media only screen and (max-width: 500px) {
+  .linkedin-link,
+  .git-link {
+    display: none;
+  }
 }

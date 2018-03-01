@@ -5,6 +5,19 @@
   display: flex;
   position: relative;
 
+  &__header {
+    @include font-medium(52px);
+    color: $light-teal;
+    position: absolute;
+    z-index: 1;
+    top: 120px;
+    left: 234px;
+    color: #93cfde;
+    margin: 0;
+    // top:
+    // z-index: 100px
+  }
+
   &__title {
     @include font-heavy(50px);
     color: $ice-blue;
@@ -19,19 +32,57 @@
 
   &__block {
     position: absolute;
+    // padding-top: 110px;
+    padding: 100px 85px 24px 24px;
     top: 96px;
     left: 130px;
-    width: 480px;
-    height: 480px;
+    max-width: 400px;
+    max-height: 370px;
     background-color: $ice-blue;
   }
 
   &__skills {
     position: absolute;
-    top: 355px;
-    left: 535px;
+    top: 385px;
+    left: 590px;
     width: 275px;
     height: 160px;
     background-color: $dark-blue;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about {
+    min-height: 10px;
+
+    &__header {
+      @include font-medium(40px);
+      display: block;
+      margin-top: 15px;
+      margin-left: 5%;
+      right: 5%;
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__block {
+      display: inline-block;
+      left: 5%;
+      max-width: 90%;
+      min-height: 280px;
+      top: 150px;
+    }
+
+    &__skills {
+      position: absolute;
+      top: 400px;
+      left: 0;
+      width: 100%;
+      min-height: 80px;
+      background-color: $dark-blue;
+      opacity: 0.8;
+    }
   }
 }

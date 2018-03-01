@@ -10,13 +10,12 @@
     left: 7%;
 
     &--home {
-      @include font-heavy(160px);
+      @include font-heavy(190px);
       transition: all .15s ease-in-out;
       opacity: 0.5;
       margin-left: auto;
       margin-right: auto;
       top: 180px;
-      font-size: 190px;
       left: 0;
       right: 0;
       z-index: 100;
@@ -35,7 +34,7 @@
   }
 }
 
-.animate__link-home {
+.animate__home-link {
   position: fixed;
   transition: all .15s ease-in-out;
   transform: scale(0.2);
@@ -90,4 +89,73 @@
   background-position: 20% 40%;
   background-size: 1100px;
   width: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+  .menu {
+
+    &__link {
+      @include font-heavy(40px);
+      top: 215px;
+      z-index: 200;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+
+      &--home {
+        @include font-heavy(60px);
+        top: 90px;
+      }
+
+      &--projects {
+        top: 75px;
+        -ms-transform: skewY(10deg);
+        -webkit-transform: skewY(10deg);
+        transform: skewY(10deg);
+      }
+
+      &--blog {
+        top: 540px;
+      }
+    }
+  }
+
+  .animate__home-link {
+    position: fixed;
+    transition: all .15s ease-in-out;
+    transform: scale(0.4);
+    top: -5px;
+  }
+
+  .view-box {
+    height: 345px;
+  }
+
+  .box-one {
+    width: 100%;
+    background-position: 45% 68%;
+    background-size: 700px;
+  }
+
+  .box-two {
+    width: 100%;
+    margin-left: 0;
+    top: 300px;
+    height: 190px;
+    background-position: 32%;
+    background-size: 700px;
+    -ms-transform: skewX(0deg);
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+    -ms-transform: skewY(-10deg);
+    -webkit-transform: skewY(-10deg);
+    transform: skewY(-10deg);
+  }
+
+  .box-three {
+    background-position: 50% 25%;
+    background-size: 500px;
+    width: 100%;
+  }
 }

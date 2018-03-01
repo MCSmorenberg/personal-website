@@ -40,27 +40,27 @@ import smoothscroll from 'smoothscroll-polyfill';
 const homeLinkTop = navLinks.home.offsetTop;
 // const windowTop = window.scrollY;
 
-var last_known_scroll_position = 0;
+var topWindow = 0;
 var ticking = false;
 
-function doSomething(scroll_pos) {
+function animationSwitch(scroll_pos) {
   // do something with the scroll position
 	if(scroll_pos > homeLinkTop) {
-		navLinks.home.classList.add('animate__link-home');
+		navLinks.home.classList.add('animate__home-link');
 	} else {
-		navLinks.home.classList.remove('animate__link-home');
+		navLinks.home.classList.remove('animate__home-link');
 	}
 }
 
 
 window.addEventListener('scroll', function(e) {
 
-  last_known_scroll_position = window.scrollY;
+  topWindow = window.scrollY;
 
   if (!ticking) {
 
     window.requestAnimationFrame(function() {
-      doSomething(last_known_scroll_position);
+      animationSwitch(topWindow);
       ticking = false;
     });
 
