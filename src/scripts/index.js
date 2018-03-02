@@ -26,19 +26,50 @@ import smoothscroll from 'smoothscroll-polyfill';
       switch(event.target) {
         case navLinks.home:
 					pages.home.scrollIntoView(smoothScrollConfig);
-          window.location.replace("#")
           break;
         case navLinks.about:
 					pages.about.scrollIntoView(smoothScrollConfig);
-          window.location.replace("#about");
           break;
         case navLinks.projects:
 					pages.projects.scrollIntoView(smoothScrollConfig);
-          window.location.replace("#projects");
           break;
       }
     });
   }
+
+const homeLinkTop = navLinks.home.offsetTop;
+// const windowTop = window.scrollY;
+
+var topWindow = 0;
+var ticking = false;
+
+function animationSwitch(scroll_pos) {
+  // do something with the scroll position
+	if(scroll_pos > homeLinkTop) {
+		navLinks.home.classList.add('animate__home-link');
+	} else {
+		navLinks.home.classList.remove('animate__home-link');
+	}
+}
+
+
+window.addEventListener('scroll', function(e) {
+
+  topWindow = window.scrollY;
+
+  if (!ticking) {
+
+    window.requestAnimationFrame(function() {
+      animationSwitch(topWindow);
+      ticking = false;
+    });
+
+    ticking = true;
+
+  }
+
+});
+
 
   // document.onreadystatechange = function() {
   //     if (document.readyState == "interactive") {

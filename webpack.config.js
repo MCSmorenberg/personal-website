@@ -28,16 +28,46 @@ module.exports = {
             loader: 'css-loader',
             options: {
               minimize: true,
-              sourceMap: true
+              // sourceMap: false
             }
           },
           'sass-loader'
         ])
+      },
+      {
+        test: /\.(gif|png|jpg|jpeg|svg)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true
+            }
+          }
+        ]
       }
+			// {
+			// 	test: /\.(gif|png|jpg|jpeg|svg)$/i,
+			// 	use: [
+			// 		'file-loader',
+			// 			{
+			// 			loader: 'image-webpack-loader',
+			// 			options: {
+			// 				mozjpeg: {
+			// 					progressive: true,
+			// 					quality: 65
+			// 				},
+			// 				optipng: {
+			// 					enabled: false,
+			// 				}
+			// 			}
+			// 		},
+			// 	],
+			// }
     ]
   },
   plugins: [
-    new ExtractTextPlugin('./css/bundle.min.css'),
+    new ExtractTextPlugin('./bundle.min.css'),
     new MinifyPlugin({}, {
       exclude: 'node_modules'
     })
