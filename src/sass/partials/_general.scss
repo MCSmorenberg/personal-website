@@ -23,6 +23,13 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 1.6em;
+
+  &--projects {
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    top: 178px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
