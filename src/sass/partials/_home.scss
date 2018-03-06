@@ -10,12 +10,12 @@
     left: 7%;
 
     &--home {
-      @include font-heavy(190px);
+      @include font-heavy(15vw);
       transition: all .15s ease-in-out;
       opacity: 0.5;
       margin-left: auto;
       margin-right: auto;
-      top: 180px;
+      top: 22vh;
       left: 0;
       right: 0;
       z-index: 100;
