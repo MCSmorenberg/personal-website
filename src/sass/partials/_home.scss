@@ -38,6 +38,10 @@
 
     &--blog {
       left: 82%;
+
+      &:hover {
+        color: #b20000;
+      }
     }
   }
 }
