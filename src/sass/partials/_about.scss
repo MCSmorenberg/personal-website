@@ -1,0 +1,167 @@
+.about {
+  overflow: hidden;
+  min-height: $page-height;
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  padding: 100px;
+  background: url('~../../src/img/maurice2.jpg');
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  &__layer {
+    background-color: $about-layer-blue;
+    opacity: 0.82;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__content-wrapper {
+    max-width: 650px;
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  &__header {
+    @include font-medium(52px);
+    color: $light-teal;
+    z-index: 2;
+    margin: 0;
+    white-space: nowrap;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    @include font-heavy(50px);
+    color: $ice-blue;
+    position: absolute;
+    margin-top: 37vh;
+    left: -30px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+  }
+
+  &__block {
+    @include font-light(15px);
+    background-color: $ice-blue;
+    display: block;
+    padding: 80px 100px 70px 60px;
+    max-width: 80%;
+    left: -15%;
+    line-height: 20px;
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  &__skills {
+    color: $ice-blue;
+    background-color: $dark-blue;
+    position: absolute;
+    padding: 30px 25px;
+    bottom: 60px;
+    right: -240px;
+    max-width: 255px;
+
+    &--header {
+      @include font-medium(15px);
+      padding-bottom: 18px;
+    }
+    &--italic {
+      @include font-light-italic(14px);
+      line-height: 25px;
+    }
+  }
+
+  &__media-icons {
+    display: none;
+  }
+}
+
+// Tablet
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 500px) {
+  .about {
+    padding: 140px 0 35px 0;
+
+    &__content-wrapper {
+      width: 90vw;
+    }
+
+    &__header {
+      @include font-medium(28px);
+      white-space: normal;
+      position: absolute;
+      line-height: normal;
+      top: -80px;
+      left: 0;
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__block {
+      max-width: 100%;
+      padding: 15px 15px 98% 15px;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    &__skills {
+      position: absolute;
+      max-width: 100vw;
+      background-color: $dark-blue;
+      opacity: 0.8;
+      padding: 20px 50px;
+      box-sizing: border-box;
+      left: -2em;
+      bottom: 95px;
+      max-width: 110vw;
+    }
+
+    &__media-icons {
+      display: inline-block;
+      position: relative;
+      margin: auto;
+
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      top: -47px;
+      left: 48%;
+      margin: 0 auto;
+      opacity: 1;
+    }
+
+    &__linkedin-link {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &__git-link {
+      display: inline-block;
+      position: absolute;
+      left: 10px;
+      top: 0;
+    }
+  }
+}

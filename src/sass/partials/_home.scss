@@ -1,0 +1,163 @@
+.menu {
+
+  &__link {
+    @include font-heavy(50px);
+    text-align: center;
+    text-decoration: none;
+    color: $ice-blue;
+    position: absolute;
+    top: 80vh;
+    left: 7%;
+
+    &:hover {
+      color: $green;
+    }
+
+    &--home {
+      @include font-heavy(15vw);
+      transition: all .15s ease-in-out;
+      opacity: 0.5;
+      margin-left: auto;
+      margin-right: auto;
+      top: 22vh;
+      left: 0;
+      right: 0;
+      z-index: 100;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &--projects {
+      left: 15%;
+      -ms-transform: skewX(-18deg);
+      -webkit-transform: skewX(-18deg);
+      transform: skewX(-18deg);
+    }
+
+    &--blog {
+      left: 82%;
+    }
+  }
+}
+
+.animate__home-link {
+  position: fixed;
+  transition: all .15s ease-in-out;
+  transform: scale(0.2);
+  top: -80px;
+  opacity: 1;
+}
+
+.view-box {
+  height: $page-height;
+  float: left;
+  overflow: hidden;
+}
+
+.view-box__layer {
+  background-color: $dusty-blue;
+  width: 100%;
+  z-index: 100;
+  height: $page-height;
+  opacity: 0.75;
+}
+
+.view-box--one {
+  width: 50%;
+  background-image: url('~../../src/img/maurice.jpg');
+  background-repeat: no-repeat;
+	background-size: 150vh;
+  background-position: 69% 50%;
+}
+
+.view-box--two {
+  width: 40%;
+  margin-left: 30%;
+  z-index: 1;
+  position: absolute;
+  background-image: url('~../../src/img/code2.jpeg');
+  background-repeat: no-repeat;
+	background-size: 150vh;
+  -ms-transform: skewX(18deg);
+  -webkit-transform: skewX(18deg);
+  transform: skewX(18deg);
+}
+
+.view-box--three {
+  background-image: url('~../../src/img/radar.jpg');
+  background-repeat: no-repeat;
+  background-position: 20% 40%;
+  background-size: 150vh;
+  width: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+  .menu {
+
+    &__link {
+      @include font-heavy(40px);
+      top: 215px;
+      z-index: 200;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+
+      &--home {
+        @include font-heavy(60px);
+        top: 90px;
+      }
+
+      &--projects {
+        top: 75px;
+        -ms-transform: skewY(10deg);
+        -webkit-transform: skewY(10deg);
+        transform: skewY(10deg);
+      }
+
+      &--blog {
+        top: 540px;
+      }
+    }
+  }
+
+  .animate__home-link {
+    position: fixed;
+    transition: all .15s ease-in-out;
+    transform: scale(0.4);
+    top: -5px;
+  }
+
+  .view-box {
+    height: 345px;
+  }
+
+  .view-box--one {
+    width: 100%;
+    background-position: 45% 68%;
+    background-size: 700px;
+  }
+
+  .view-box--two {
+    width: 100%;
+    margin-left: 0;
+    top: 300px;
+    height: 190px;
+    background-position: 32%;
+    background-size: 700px;
+    -ms-transform: skewX(0deg);
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+    -ms-transform: skewY(-10deg);
+    -webkit-transform: skewY(-10deg);
+    transform: skewY(-10deg);
+  }
+
+  .view-box--three {
+    background-position: 50% 25%;
+    background-size: 500px;
+    width: 100%;
+  }
+}
