@@ -28,6 +28,7 @@ import smoothscroll from 'smoothscroll-polyfill';
 					pages.home.scrollIntoView(smoothScrollConfig);
           break;
         case navLinks.about:
+					debugger;
 					pages.about.scrollIntoView(smoothScrollConfig);
           break;
         case navLinks.projects:
