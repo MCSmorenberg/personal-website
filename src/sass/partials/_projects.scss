@@ -1,8 +1,8 @@
 .projects {
   height: $page-height;
+  // max-width: 100vw;
   background: $light-teal;
   display: flex;
-  overflow: hidden;
 
   &__title {
     @include font-heavy(50px);
@@ -94,8 +94,10 @@
   &__content {
     transition: all .15s ease-in-out;
     position: absolute;
+
 		// Firefox fix
 		top: 0; left: 0;
+
     height: 100%;
     width: 100%;
     z-index: 2;
@@ -108,11 +110,6 @@
     height: 100%;
     z-index: 1;
     opacity: 0.85;
-    // position: absolute;
-    // top: 0;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
 
     &-text {
       @include font-medium(20px);
@@ -145,31 +142,8 @@
 
   .grid {
     padding: 8rem 1rem 3.75rem 1rem;
-  	// width: 100%;
-  	// display: grid;
-  	// grid-gap: 10px;
   	grid-template-columns: repeat(9, 1fr);
   	grid-template-rows: repeat(5, 1fr);
-
-    // &__content {
-    //   // position: initial;
-    //   top: 0;
-    // }
-
-    &__item {
-    	// display: flex;
-    	// justify-content: center;
-    	// align-items: center;
-      // position: relative;
-    	// padding: 2.125rem;
-    	// background-color: white;
-
-      // &:hover {
-      //   .grid__layer,
-      //   .grid__content {
-      //     opacity: 0;
-      //   }
-      // }
 
     	&--small {
     		grid-column: span 9;

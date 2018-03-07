@@ -10,12 +10,12 @@
     left: 7%;
 
     &--home {
-      @include font-heavy(15vw);
+      @include font-heavy(190px);
       transition: all .15s ease-in-out;
       opacity: 0.5;
       margin-left: auto;
       margin-right: auto;
-      top: 22vh;
+      top: 180px;
       left: 0;
       right: 0;
       z-index: 100;
@@ -71,7 +71,7 @@
   position: absolute;
   background-image: url('~../../src/img/code2.jpeg');
   background-repeat: no-repeat;
-  background-position: cover;
+  background-position: 20%;
   background-size: 1050px;
   -ms-transform: skewX(18deg);
   -webkit-transform: skewX(18deg);
