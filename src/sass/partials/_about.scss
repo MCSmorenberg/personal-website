@@ -1,0 +1,111 @@
+.about {
+  height: $page-height;
+  width: 100%;
+  display: flex;
+  position: relative;
+  background-image: url('~../../src/img/maurice2.jpg');
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-size: 97em;
+
+  &__header {
+    @include font-medium(52px);
+    color: $light-teal;
+    position: absolute;
+    z-index: 1;
+    top: 120px;
+    left: 234px;
+    color: #93cfde;
+    margin: 0;
+  }
+
+  &__title {
+    @include font-heavy(50px);
+    color: $ice-blue;
+    position: absolute;
+    margin-top: 300px;
+    left: -30px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+  }
+
+  &__block {
+    @include font-light(15px);
+    position: absolute;
+    padding: 100px 90px 70px 60px;
+    top: 96px;
+    left: 130px;
+    max-width: 400px;
+    background-color: $ice-blue;
+    line-height: 20px;
+  }
+
+  &__skills {
+    padding: 30px 25px 30px 25px;
+    position: absolute;
+    top: 340px;
+    left: 635px;
+    width: 255px;
+    height: 140px;
+    color: $ice-blue;
+    background-color: $dark-blue;
+
+    &--header {
+      @include font-medium(15px);
+      padding-bottom: 18px;
+    }
+    &--italic {
+      @include font-light-italic(14px);
+      line-height: 25px;
+    }
+  }
+
+}
+
+.about__layer {
+  background-color: $about-layer-blue;
+  height: $page-height;
+  width: 100%;
+  opacity: 0.82;
+}
+
+// Tablet
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 500px) {
+  .about {
+    min-height: 10px;
+
+    &__header {
+      @include font-medium(40px);
+      display: block;
+      margin-top: 15px;
+      margin-left: 5%;
+      right: 5%;
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__block {
+      display: inline-block;
+      left: 5%;
+      max-width: 90%;
+      min-height: 280px;
+      top: 150px;
+    }
+
+    &__skills {
+      position: absolute;
+      top: 400px;
+      left: 0;
+      width: 100%;
+      min-height: 80px;
+      background-color: $dark-blue;
+      opacity: 0.8;
+    }
+  }
+}
