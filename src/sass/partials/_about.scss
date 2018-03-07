@@ -46,7 +46,7 @@
     @include font-heavy(50px);
     color: $ice-blue;
     position: absolute;
-    margin-top: 37vh;
+    margin-top: 300px;
     left: -30px;
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -137,15 +137,18 @@
 
     &__media-icons {
       display: inline-block;
+
       position: relative;
       margin: auto;
+      // left: 0;
+      // right: 0;
 
       -webkit-transform: translateX(-50%);
       -moz-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       -o-transform: translateX(-50%);
       top: -47px;
-      left: 48%;
+      left: 46%;
       margin: 0 auto;
       opacity: 1;
     }
@@ -160,7 +163,7 @@
     &__git-link {
       display: inline-block;
       position: absolute;
-      left: 10px;
+      left: 20px;
       top: 0;
     }
   }
