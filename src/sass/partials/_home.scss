@@ -43,14 +43,9 @@
 }
 
 .view-box {
-  /* position: relative; */
-  /* width: 44%; */
   height: $page-height;
-  /* display: inline; */
   float: left;
-  /* margin-bottom: 25px; */
   overflow: hidden;
-  /* margin-left: -12%; */
 }
 
 .view-box__layer {
@@ -61,7 +56,7 @@
   opacity: 0.75;
 }
 
-.box-one {
+.view-box--one {
   width: 50%;
   background-image: url('~../../src/img/maurice.jpg');
   background-repeat: no-repeat;
@@ -69,7 +64,7 @@
   background-size: 1050px;
 }
 
-.box-two {
+.view-box--two {
   width: 40%;
   margin-left: 30%;
   z-index: 1;
@@ -83,7 +78,7 @@
   transform: skewX(18deg);
 }
 
-.box-three {
+.view-box--three {
   background-image: url('~../../src/img/radar.jpg');
   background-repeat: no-repeat;
   background-position: 20% 40%;
@@ -132,13 +127,13 @@
     height: 345px;
   }
 
-  .box-one {
+  .view-box--one {
     width: 100%;
     background-position: 45% 68%;
     background-size: 700px;
   }
 
-  .box-two {
+  .view-box--two {
     width: 100%;
     margin-left: 0;
     top: 300px;
@@ -153,7 +148,7 @@
     transform: skewY(-10deg);
   }
 
-  .box-three {
+  .view-box--three {
     background-position: 50% 25%;
     background-size: 500px;
     width: 100%;

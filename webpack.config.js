@@ -1,6 +1,7 @@
 const path = require('path'),
       ExtractTextPlugin = require("extract-text-webpack-plugin"),
-      MinifyPlugin = require("babel-minify-webpack-plugin");
+      MinifyPlugin = require("babel-minify-webpack-plugin"),
+      HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: ['./src/scripts/index.js', './src/sass/style.scss'],
@@ -46,27 +47,17 @@ module.exports = {
           }
         ]
       }
-			// {
-			// 	test: /\.(gif|png|jpg|jpeg|svg)$/i,
-			// 	use: [
-			// 		'file-loader',
-			// 			{
-			// 			loader: 'image-webpack-loader',
-			// 			options: {
-			// 				mozjpeg: {
-			// 					progressive: true,
-			// 					quality: 65
-			// 				},
-			// 				optipng: {
-			// 					enabled: false,
-			// 				}
-			// 			}
-			// 		},
-			// 	],
-			// }
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Personal Website',
+      minify: {
+				collapseWhitespace: true
+			},
+			hash: true,
+      template: 'index.html'
+    }),
     new ExtractTextPlugin('./bundle.min.css'),
     new MinifyPlugin({}, {
       exclude: 'node_modules'

@@ -1,9 +1,12 @@
 .about {
   height: $page-height;
   width: 100%;
-  background-color: #696969;
   display: flex;
   position: relative;
+  background-image: url('~../../src/img/maurice2.jpg');
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-size: 97em;
 
   &__header {
     @include font-medium(52px);
@@ -14,8 +17,6 @@
     left: 234px;
     color: #93cfde;
     margin: 0;
-    // top:
-    // z-index: 100px
   }
 
   &__title {
@@ -31,25 +32,47 @@
   }
 
   &__block {
+    @include font-light(15px);
     position: absolute;
-    // padding-top: 110px;
-    padding: 100px 85px 24px 24px;
+    padding: 100px 90px 70px 60px;
     top: 96px;
     left: 130px;
     max-width: 400px;
-    max-height: 370px;
     background-color: $ice-blue;
+    line-height: 20px;
   }
 
   &__skills {
+    padding: 30px 25px 30px 25px;
     position: absolute;
-    top: 385px;
-    left: 590px;
-    width: 275px;
-    height: 160px;
+    top: 340px;
+    left: 635px;
+    width: 255px;
+    height: 140px;
+    color: $ice-blue;
     background-color: $dark-blue;
+
+    &--header {
+      @include font-medium(15px);
+      padding-bottom: 18px;
+    }
+    &--italic {
+      @include font-light-italic(14px);
+      line-height: 25px;
+    }
   }
+
 }
+
+.about__layer {
+  background-color: $about-layer-blue;
+  height: $page-height;
+  width: 100%;
+  opacity: 0.82;
+}
+
+// Tablet
+@media only screen and (max-width: 768px) {}
 
 @media only screen and (max-width: 500px) {
   .about {

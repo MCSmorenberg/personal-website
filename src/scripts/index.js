@@ -40,8 +40,8 @@ import smoothscroll from 'smoothscroll-polyfill';
 const homeLinkTop = navLinks.home.offsetTop;
 // const windowTop = window.scrollY;
 
-var topWindow = 0;
-var ticking = false;
+let topWindow = 0;
+let ticking = false;
 
 function animationSwitch(scroll_pos) {
   // do something with the scroll position
@@ -52,8 +52,7 @@ function animationSwitch(scroll_pos) {
 	}
 }
 
-
-window.addEventListener('scroll', function(e) {
+window.addEventListener('scroll', (e) => {
 
   topWindow = window.scrollY;
 
