@@ -6,8 +6,12 @@
     text-decoration: none;
     color: $ice-blue;
     position: absolute;
-    top: 500px;
+    top: 80vh;
     left: 7%;
+
+    &:hover {
+      color: $green;
+    }
 
     &--home {
       @include font-heavy(15vw);
@@ -19,10 +23,14 @@
       left: 0;
       right: 0;
       z-index: 100;
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
     &--projects {
-      left: 20%;
+      left: 15%;
       -ms-transform: skewX(-18deg);
       -webkit-transform: skewX(-18deg);
       transform: skewX(-18deg);
@@ -38,7 +46,7 @@
   position: fixed;
   transition: all .15s ease-in-out;
   transform: scale(0.2);
-  top: -65px;
+  top: -80px;
   opacity: 1;
 }
 
@@ -60,8 +68,8 @@
   width: 50%;
   background-image: url('~../../src/img/maurice.jpg');
   background-repeat: no-repeat;
+	background-size: 150vh;
   background-position: 69% 50%;
-  background-size: 1050px;
 }
 
 .view-box--two {
@@ -71,8 +79,7 @@
   position: absolute;
   background-image: url('~../../src/img/code2.jpeg');
   background-repeat: no-repeat;
-  background-position: cover;
-  background-size: 1050px;
+	background-size: 150vh;
   -ms-transform: skewX(18deg);
   -webkit-transform: skewX(18deg);
   transform: skewX(18deg);
@@ -82,7 +89,7 @@
   background-image: url('~../../src/img/radar.jpg');
   background-repeat: no-repeat;
   background-position: 20% 40%;
-  background-size: 1100px;
+  background-size: 150vh;
   width: 50%;
 }
 
