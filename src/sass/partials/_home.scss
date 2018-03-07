@@ -14,12 +14,12 @@
     }
 
     &--home {
-      @include font-heavy(15vw);
+      @include font-heavy(190px);
       transition: all .15s ease-in-out;
       opacity: 0.5;
       margin-left: auto;
       margin-right: auto;
-      top: 22vh;
+      top: 180px;
       left: 0;
       right: 0;
       z-index: 100;

@@ -1,45 +1,22 @@
 .about {
-  overflow: hidden;
-  min-height: $page-height;
+  height: $page-height;
   width: 100%;
   display: flex;
   position: relative;
-  box-sizing: border-box;
-  padding: 100px;
-  background: url('~../../src/img/maurice2.jpg');
+  background-image: url('~../../src/img/maurice2.jpg');
   background-repeat: no-repeat;
   background-position: 0% 50%;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  &__layer {
-    background-color: $about-layer-blue;
-    opacity: 0.82;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  &__content-wrapper {
-    max-width: 650px;
-    width: 80vw;
-    margin: 0 auto;
-  }
+  background-size: 97em;
 
   &__header {
     @include font-medium(52px);
     color: $light-teal;
-    z-index: 2;
+    position: absolute;
+    z-index: 1;
+    top: 120px;
+    left: 234px;
+    color: #93cfde;
     margin: 0;
-    white-space: nowrap;
-    margin-bottom: 60px;
   }
 
   &__title {
@@ -56,25 +33,24 @@
 
   &__block {
     @include font-light(15px);
+    position: absolute;
+    padding: 100px 90px 70px 60px;
+    top: 96px;
+    left: 130px;
+    max-width: 400px;
     background-color: $ice-blue;
-    display: block;
-    padding: 80px 100px 70px 60px;
-    max-width: 80%;
-    left: -15%;
     line-height: 20px;
-    position: relative;
-    box-sizing: border-box;
-    height: auto;
   }
 
   &__skills {
+    padding: 30px 25px 30px 25px;
+    position: absolute;
+    top: 340px;
+    left: 635px;
+    width: 255px;
+    height: 140px;
     color: $ice-blue;
     background-color: $dark-blue;
-    position: absolute;
-    padding: 30px 25px;
-    bottom: 60px;
-    right: -240px;
-    max-width: 255px;
 
     &--header {
       @include font-medium(15px);
@@ -86,9 +62,13 @@
     }
   }
 
-  &__media-icons {
-    display: none;
-  }
+}
+
+.about__layer {
+  background-color: $about-layer-blue;
+  height: $page-height;
+  width: 100%;
+  opacity: 0.82;
 }
 
 // Tablet
@@ -96,19 +76,14 @@
 
 @media only screen and (max-width: 500px) {
   .about {
-    padding: 140px 0 35px 0;
-
-    &__content-wrapper {
-      width: 90vw;
-    }
+    min-height: 10px;
 
     &__header {
-      @include font-medium(28px);
-      white-space: normal;
-      position: absolute;
-      line-height: normal;
-      top: -80px;
-      left: 0;
+      @include font-medium(40px);
+      display: block;
+      margin-top: 15px;
+      margin-left: 5%;
+      right: 5%;
     }
 
     &__title {
@@ -116,16 +91,19 @@
     }
 
     &__block {
-      max-width: 100%;
-      padding: 15px 15px 98% 15px;
-      left: 0;
-      right: 0;
-      margin: auto;
+      display: inline-block;
+      left: 5%;
+      max-width: 90%;
+      min-height: 280px;
+      top: 150px;
     }
 
     &__skills {
       position: absolute;
-      max-width: 100vw;
+      top: 400px;
+      left: 0;
+      width: 100%;
+      min-height: 80px;
       background-color: $dark-blue;
       opacity: 0.8;
       padding: 20px 50px;
