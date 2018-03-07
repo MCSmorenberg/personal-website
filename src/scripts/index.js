@@ -28,7 +28,6 @@ import smoothscroll from 'smoothscroll-polyfill';
 					pages.home.scrollIntoView(smoothScrollConfig);
           break;
         case navLinks.about:
-					debugger;
 					pages.about.scrollIntoView(smoothScrollConfig);
           break;
         case navLinks.projects:
@@ -38,44 +37,35 @@ import smoothscroll from 'smoothscroll-polyfill';
     });
   }
 
-const homeLinkTop = navLinks.home.offsetTop;
-// const windowTop = window.scrollY;
+	const homeLinkTop = navLinks.home.offsetTop;
+	// const windowTop = window.scrollY;
 
-let topWindow = 0;
-let ticking = false;
+	let topWindow = 0;
+	let ticking = false;
 
-function animationSwitch(scroll_pos) {
-  // do something with the scroll position
-	if(scroll_pos > homeLinkTop) {
-		navLinks.home.classList.add('animate__home-link');
-	} else {
-		navLinks.home.classList.remove('animate__home-link');
+	function animationSwitch(scroll_pos) {
+	  // do something with the scroll position
+		if(scroll_pos > homeLinkTop) {
+			navLinks.home.classList.add('animate__home-link');
+		} else {
+			navLinks.home.classList.remove('animate__home-link');
+		}
 	}
-}
 
-window.addEventListener('scroll', (e) => {
+	window.addEventListener('scroll', (e) => {
 
-  topWindow = window.scrollY;
+	  topWindow = window.scrollY;
 
-  if (!ticking) {
+	  if (!ticking) {
 
-    window.requestAnimationFrame(function() {
-      animationSwitch(topWindow);
-      ticking = false;
-    });
+	    window.requestAnimationFrame(function() {
+	      animationSwitch(topWindow);
+	      ticking = false;
+	    });
 
-    ticking = true;
+	    ticking = true;
 
-  }
+	  }
 
-});
-
-
-  // document.onreadystatechange = function() {
-  //     if (document.readyState == "interactive") {
-  //       console.log("interactive");
-  //     } else if (document.readyState == "complete") {
-  //       console.log("complete");
-  //     }
-  // }
+	});
 })();
