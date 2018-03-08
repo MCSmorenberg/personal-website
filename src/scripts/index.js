@@ -15,9 +15,9 @@ import smoothscroll from 'smoothscroll-polyfill';
     projects: document.querySelector("#projects-page")
   }
 
-	const smoothScrollConfig =  {
-		behavior: 'smooth'
-	};
+	function setScrollConfig(page) {
+		return { top: page.offsetTop, left: 0, behavior: 'smooth' }
+	}
 
   for (let key in navLinks){
     navLinks[key].addEventListener("click", (event) => {
@@ -25,13 +25,13 @@ import smoothscroll from 'smoothscroll-polyfill';
 
       switch(event.target) {
         case navLinks.home:
-					pages.home.scrollIntoView(smoothScrollConfig);
+					window.scroll(setScrollConfig(pages.home));
           break;
         case navLinks.about:
-					pages.about.scrollIntoView(smoothScrollConfig);
+					window.scrollBy(setScrollConfig(pages.about));
           break;
         case navLinks.projects:
-					pages.projects.scrollIntoView(smoothScrollConfig);
+					window.scrollBy(setScrollConfig(pages.projects));
           break;
       }
     });
@@ -39,9 +39,13 @@ import smoothscroll from 'smoothscroll-polyfill';
 
 	const homeLinkTop = navLinks.home.offsetTop;
 	// const windowTop = window.scrollY;
-
 	let topWindow = 0;
 	let ticking = false;
+	let didScroll = false;
+
+	function startAnimation() {
+		didScroll = true;
+	}
 
 	function animationSwitch(scroll_pos) {
 	  // do something with the scroll position
@@ -51,21 +55,23 @@ import smoothscroll from 'smoothscroll-polyfill';
 			navLinks.home.classList.remove('animate__home-link');
 		}
 	}
+	setInterval(function() {
+		if(didScroll) {
+			didScroll = false;
 
-	window.addEventListener('scroll', (e) => {
+			window.addEventListener('scroll', (e) => {
+			  topWindow = window.scrollY;
 
-	  topWindow = window.scrollY;
+			  if (!ticking) {
+			    window.requestAnimationFrame(function() {
+			      animationSwitch(topWindow);
+			      ticking = false;
+			    });
+			    ticking = true;
+			  }
+			});
+		}
+	}, 350);
 
-	  if (!ticking) {
-
-	    window.requestAnimationFrame(function() {
-	      animationSwitch(topWindow);
-	      ticking = false;
-	    });
-
-	    ticking = true;
-
-	  }
-
-	});
+	window.onscroll = startAnimation;
 })();
