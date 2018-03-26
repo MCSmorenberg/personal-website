@@ -49,7 +49,7 @@
   position: fixed;
   transition: all .15s ease-in-out;
   transform: scale(0.2);
-  top: -80px;
+  top: -10vh;
   opacity: 1;
 }
 
@@ -96,11 +96,31 @@
   width: 50%;
 }
 
-@media only screen and (max-width: 768px) {}
+// @include tablet();
+// TODO: Use it like this?
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    &__link {
+      @include font-heavy(35px);
+      top: 70vh;
+
+      &--home {
+        // TODO: Change this class to about?
+        @include font-heavy(15vw);
+        top: 22vh;
+      }
+    }
+  }
+
+  .animate__home-link {
+    top: -24px;
+  }
+}
+
 
 @media only screen and (max-width: 500px) {
   .menu {
-
     &__link {
       @include font-heavy(40px);
       top: 215px;
@@ -129,8 +149,6 @@
   }
 
   .animate__home-link {
-    position: fixed;
-    transition: all .15s ease-in-out;
     transform: scale(0.4);
     top: -5px;
   }
