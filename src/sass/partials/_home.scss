@@ -99,6 +99,7 @@
 // @include tablet();
 // TODO: Use it like this?
 
+// Tablet
 @media only screen and (max-width: 768px) {
   .menu {
     &__link {
@@ -118,7 +119,7 @@
   }
 }
 
-
+// Mobile
 @media only screen and (max-width: 500px) {
   .menu {
     &__link {

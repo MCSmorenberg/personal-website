@@ -18,7 +18,7 @@
 }
 
 .grid {
-  padding: 7.75rem 10.75rem 7.75rem 10.75rem;
+  padding: 7.75rem 9.5rem 7.75rem 9.5rem;
 	width: 100%;
 	display: grid;
 	grid-gap: 10px;
@@ -149,6 +149,29 @@
   }
 }
 
+// Tablet
+@media only screen and (max-width: 768px) {
+	.grid {
+		padding: 5.5rem 4.5rem 5.5rem 4.5rem;
+
+		&__layer-text {
+			@include font-medium(16px);
+			padding: 3px 20px;
+		}
+	}
+
+	.projects__title {
+    @include font-heavy(40px);
+    left: -50px;
+	}
+
+	.grid__hover-layer-text {
+		@include font-light-italic(12px);
+		margin-top: 10%;
+	}
+}
+
+// Mobile
 @media only screen and (max-width: 500px) {
   .projects {
     height: 1000px;
