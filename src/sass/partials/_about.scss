@@ -92,7 +92,30 @@
 }
 
 // Tablet
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+	.about {
+		&__header {
+	    @include font-medium(40px);
+	    margin: 0;
+	    white-space: nowrap;
+	    margin-bottom: 40px;
+	  }
+
+		&__block {
+			padding: 50px 75px 35px 30px;
+		}
+
+		&__title {
+			@include font-heavy(40px);
+		}
+
+		&__skills {
+	    padding: 20px 20px;
+	    right: -175px;
+	    max-width: 205px;
+		}
+	}
+}
 
 @media only screen and (max-width: 500px) {
   .about {
